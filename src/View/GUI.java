@@ -1,4 +1,4 @@
-package View;
+package view;
 import java.awt.BorderLayout;
 import java.awt.Desktop;
 import java.awt.Dimension;
@@ -24,17 +24,22 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.xml.bind.JAXBException;
 
-import Controller.Controller;
-import Model.Item;
+import model.Item;
+import controller.Controller;
 
-
+/**
+ * GUI class is user interface for RSS Reader.
+ * 
+ * @author Latthapat Tangtrustham 5510547014
+ * @version 2014/09/10
+ *
+ */
 public class GUI extends JFrame {
 	
 	private Controller controller;
 	
 	private JPanel panelTop;
 	private JPanel panelBottom;
-//	private JPanel panelItem;
 	private JScrollPane scrollItem; 
 	private JEditorPane editorPane;
 	
@@ -48,17 +53,26 @@ public class GUI extends JFrame {
 	private JLabel link;
 	private URI uri;
 	
+	/**
+	 * Constructor for this class.
+	 */
 	public GUI(){
 		controller = new Controller();
 		initComponents();
 	
 	}
 	
+	/**
+	 * run method for GUI
+	 */
 	public void run(){
 		pack();
 		setVisible(true);	
 	}
 
+	/**
+	 * initialize method
+	 */
 	private void initComponents(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(800, 600);
@@ -155,6 +169,11 @@ public class GUI extends JFrame {
 		
 	}
 	
+	/**
+	 * afterEnter method for create components for GUI after input link and enter pressed. 
+	 * 
+	 * @param item a list of item
+	 */
 	public void afterEnter(Item[] item){
 		itemList = new JList(item);
 		scrollItem.setViewportView(itemList);
