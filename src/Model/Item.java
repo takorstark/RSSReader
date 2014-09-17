@@ -10,15 +10,15 @@ import java.util.List;
  */
 public class Item {
 	
-	String title;
+	private String title;
 	
-	String description;
+	private String description;
 	
-	String link;
+	private String link;
 			
-	String guid;
+	private String guid;
 	
-	String pubDate;
+	private String pubDate;
 
 	/**
 	 * Sets title.

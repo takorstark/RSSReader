@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 public class Rss {
 	
-	Channel channel;
+	private Channel channel;
 
 	/**
 	 * Gets Channel.

@@ -116,10 +116,10 @@ public class GUI extends JFrame {
 		panelBottom.setLayout(new BoxLayout(panelBottom, BoxLayout.X_AXIS));
 		
 		scrollItem = new JScrollPane();
-		scrollItem.setPreferredSize(new Dimension(200, 550));
+		scrollItem.setPreferredSize(new Dimension(350, 550));
 		
 		editorPane = new JEditorPane();
-		editorPane.setPreferredSize(new Dimension(400, 550));
+		editorPane.setPreferredSize(new Dimension(450, 550));
 		
 		panelBottom.add(scrollItem);
 		panelBottom.add(editorPane);
@@ -182,7 +182,6 @@ public class GUI extends JFrame {
 			
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
-				System.out.println("abc");
 				Item selectedItem;
 				selectedItem = (Item) itemList.getSelectedValue();
 				
@@ -192,7 +191,6 @@ public class GUI extends JFrame {
 				try {
 					uri = new URI(selectedItem.getLink());
 				} catch (URISyntaxException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				

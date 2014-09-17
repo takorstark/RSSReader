@@ -11,21 +11,21 @@ import java.util.List;
  */
 public class Channel {
 
-	String title;
+	private String title;
 
-	String link;
+	private String link;
 	
-	String description;
+	private String description;
 	
-	String language;
+	private String language;
 	
-	String lastBuildDate;
+	private String lastBuildDate;
 	
-	String copyright;
+	private String copyright;
 	
-	String image;
+	private String image;
 	
-	List<Item> item;
+	private List<Item> item;
 	
 	/**
 	 * Gets title.

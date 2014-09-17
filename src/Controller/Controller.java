@@ -19,7 +19,7 @@ import model.Rss;
  */
 public class Controller {
 
-	Rss rss;
+	private Rss rss;
 
 	/**
 	 * Gets Rss.
